@@ -1,9 +1,10 @@
 :root {
   --bg: #000000;
   --accent: #8c52ff;
-  --text: #f0e9f2;
-  --muted: rgba(240, 233, 242, 0.6);
   --cta: #ff3258;
+  --text: #f0e9f2;
+  --muted: rgba(240, 233, 242, 0.65);
+  --card: #0c0c0c;
 }
 
 * {
@@ -19,23 +20,36 @@ html, body {
 }
 
 section {
-  padding: 120px 10vw;
+  padding: 140px 10vw;
 }
 
-h1, h2 {
+h1 {
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
 }
 
 h2 {
-  font-size: clamp(2rem, 3vw, 3rem);
-  margin-bottom: 32px;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  margin-bottom: 36px;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
 }
 
 p {
+  font-size: 18px;
+  line-height: 1.8;
   color: var(--muted);
-  line-height: 1.7;
-  font-size: 16px;
+  max-width: 720px;
 }
 
 a {

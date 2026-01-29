@@ -5,8 +5,9 @@ export default function Contact() {
       <a
         href="mailto:gaganzsingh3@gmail.com"
         style={{
+          fontSize: 20,
+          fontWeight: 800,
           color: "var(--cta)",
-          fontWeight: 700,
         }}
       >
         Email Me →

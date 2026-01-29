@@ -3,19 +3,12 @@ import profile from "../assets/profile.jpg";
 
 export default function Hero() {
   return (
-    <section
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        padding: "0 10vw",
-      }}
-    >
+    <section style={{ minHeight: "100vh", display: "flex", alignItems: "center" }}>
       <motion.div
-        initial={{ opacity: 0, y: 60 }}
+        initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        style={{ maxWidth: 800 }}
+        style={{ maxWidth: 820 }}
       >
         <img
           src={profile}
@@ -24,38 +17,30 @@ export default function Hero() {
             width: 120,
             height: 120,
             borderRadius: "50%",
-            marginBottom: 24,
+            marginBottom: 32,
+            border: "3px solid var(--accent)",
           }}
         />
 
-        <h1 style={{ fontSize: "clamp(3rem, 6vw, 5rem)" }}>
-          Gagan Singh
-        </h1>
+        <h1>Gagan Singh</h1>
 
-        <p
-          style={{
-            margin: "20px 0",
-            color: "var(--accent)",
-            fontSize: 18,
-          }}
-        >
+        <p style={{ color: "var(--accent)", margin: "24px 0 40px" }}>
           Technical Writer · API Documentation · Product Docs
         </p>
 
         <motion.a
           href="/resume.pdf"
           target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.06 }}
+          whileTap={{ scale: 0.96 }}
           style={{
             display: "inline-block",
-            padding: "14px 28px",
+            padding: "16px 36px",
             background: "var(--cta)",
             color: "#000",
-            borderRadius: 12,
-            fontWeight: 700,
-            fontSize: 14,
+            borderRadius: 14,
+            fontWeight: 800,
+            fontSize: 16,
           }}
         >
           Download Resume

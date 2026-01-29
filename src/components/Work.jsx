@@ -3,13 +3,11 @@ import { motion } from "framer-motion";
 const works = [
   {
     src: "/work-1.gif",
-    description:
-      "API documentation, developer portals, and knowledge bases designed for real-world engineering workflows.",
+    text: "API documentation, developer portals, and knowledge bases designed for real-world engineering workflows.",
   },
   {
     src: "/work-2.gif",
-    description:
-      "User guides, installation manuals, and product documentation built for scale and clarity.",
+    text: "User guides, installation manuals, and product documentation built for scale and clarity.",
   },
 ];
 
@@ -21,37 +19,36 @@ export default function Work() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-          gap: 48,
+          gridTemplateColumns: "repeat(auto-fit, minmax(380px, 1fr))",
+          gap: 60,
         }}
       >
-        {works.map((work, index) => (
+        {works.map((w, i) => (
           <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            key={i}
+            initial={{ opacity: 0, y: 60, filter: "blur(12px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            whileHover={{ y: -8 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            whileHover={{ y: -10 }}
             style={{
-              background: "#0b0b0b",
-              borderRadius: 18,
-              padding: 24,
-              border: "1px solid rgba(255,255,255,0.06)",
+              background: var(--card),
+              padding: 28,
+              borderRadius: 20,
+              borderLeft: "6px solid var(--accent)",
             }}
           >
             <img
-              src={work.src}
-              alt=""
+              src={w.src}
               loading="lazy"
               style={{
                 width: "100%",
-                borderRadius: 12,
-                marginBottom: 20,
+                borderRadius: 14,
+                marginBottom: 24,
               }}
             />
 
-            <p>{work.description}</p>
+            <p>{w.text}</p>
           </motion.div>
         ))}
       </div>
