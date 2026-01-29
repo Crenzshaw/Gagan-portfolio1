@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 
 const works = [
   {
-    src: "/work-1.gif",
+    src: "/work1.gif",
     text:
       "API documentation, developer portals, and knowledge bases designed for real-world engineering workflows.",
   },
   {
-    src: "/work-2.gif",
+    src: "/work2.gif",
     text:
       "User guides, installation manuals, and product documentation built for scale and clarity.",
   },
