@@ -32,7 +32,7 @@ export default function Work() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             whileHover={{ y: -10 }}
             style={{
-              background: var(--card),
+              background: "var(--card)",
               padding: 28,
               borderRadius: 20,
               borderLeft: "6px solid var(--accent)",
@@ -40,18 +40,3 @@ export default function Work() {
           >
             <img
               src={w.src}
-              loading="lazy"
-              style={{
-                width: "100%",
-                borderRadius: 14,
-                marginBottom: 24,
-              }}
-            />
-
-            <p>{w.text}</p>
-          </motion.div>
-        ))}
-      </div>
-    </section>
-  );
-}
