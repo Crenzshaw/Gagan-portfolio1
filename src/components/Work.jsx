@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
 
+const BASE = import.meta.env.BASE_URL;
+
 const works = [
   {
-    src: "/work1.gif",
+    src: `${BASE}work1.gif`,
     text:
       "API documentation, developer portals, and knowledge bases designed for real-world engineering workflows.",
   },
   {
-    src: "/work2.gif",
+    src: `${BASE}work2.gif`,
     text:
       "User guides, installation manuals, and product documentation built for scale and clarity.",
   },
