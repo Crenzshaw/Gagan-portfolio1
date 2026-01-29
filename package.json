@@ -3,11 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
- "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "deploy": "npm run build && gh-pages -d dist"
-},
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
   "dependencies": {
     "framer-motion": "^12.29.2",
     "gh-pages": "^6.3.0",
