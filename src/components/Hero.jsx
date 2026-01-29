@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import profile from "../assets/profile.jpg";
-import resume from "../assets/resume.pdf";
 
 export default function Hero() {
   return (
@@ -9,12 +8,13 @@ export default function Hero() {
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",
+        padding: "0 10vw",
       }}
     >
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
         style={{ maxWidth: 800 }}
       >
         <img
@@ -32,21 +32,30 @@ export default function Hero() {
           Gagan Singh
         </h1>
 
-        <p style={{ margin: "20px 0", color: "var(--accent)" }}>
+        <p
+          style={{
+            margin: "20px 0",
+            color: "var(--accent)",
+            fontSize: 18,
+          }}
+        >
           Technical Writer · API Documentation · Product Docs
         </p>
 
         <motion.a
-          href={resume}
-          download
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           style={{
             display: "inline-block",
             padding: "14px 28px",
             background: "var(--cta)",
             color: "#000",
-            borderRadius: 10,
+            borderRadius: 12,
             fontWeight: 700,
+            fontSize: 14,
           }}
         >
           Download Resume
