@@ -1,6 +1,17 @@
 import { motion } from "framer-motion";
-import work1 from "../assets/work-1.png";
-import work2 from "../assets/work-2.png";
+
+const works = [
+  {
+    src: "/work-1.gif",
+    description:
+      "API documentation, developer portals, and knowledge bases designed for real-world engineering workflows.",
+  },
+  {
+    src: "/work-2.gif",
+    description:
+      "User guides, installation manuals, and product documentation built for scale and clarity.",
+  },
+];
 
 export default function Work() {
   return (
@@ -11,33 +22,36 @@ export default function Work() {
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-          gap: 40,
+          gap: 48,
         }}
       >
-        {[work1, work2].map((img, i) => (
+        {works.map((work, index) => (
           <motion.div
-            key={i}
-            whileHover={{ y: -10 }}
-            transition={{ duration: 0.3 }}
+            key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            whileHover={{ y: -8 }}
             style={{
-              background: "#0d0d0d",
-              borderRadius: 16,
-              padding: 20,
+              background: "#0b0b0b",
+              borderRadius: 18,
+              padding: 24,
+              border: "1px solid rgba(255,255,255,0.06)",
             }}
           >
             <img
-              src={img}
+              src={work.src}
               alt=""
+              loading="lazy"
               style={{
                 width: "100%",
                 borderRadius: 12,
-                marginBottom: 16,
+                marginBottom: 20,
               }}
             />
-            <p>
-              API documentation, user guides, and knowledge bases designed for
-              real developer workflows.
-            </p>
+
+            <p>{work.description}</p>
           </motion.div>
         ))}
       </div>
