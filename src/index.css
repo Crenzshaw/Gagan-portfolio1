@@ -2,8 +2,8 @@
   --bg: #000000;
   --accent: #8c52ff;
   --text: #f0e9f2;
-  --cta: #ff3258;
   --muted: rgba(240, 233, 242, 0.6);
+  --cta: #ff3258;
 }
 
 * {
@@ -12,26 +12,33 @@
 
 html, body {
   margin: 0;
-  padding: 0;
   background: var(--bg);
   color: var(--text);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
 }
 
-h1, h2, h3 {
-  margin: 0;
-  font-weight: 700;
+section {
+  padding: 120px 10vw;
+}
+
+h1, h2 {
+  font-weight: 800;
   letter-spacing: -0.03em;
 }
 
+h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: 32px;
+}
+
 p {
-  margin: 0;
   color: var(--muted);
   line-height: 1.7;
+  font-size: 16px;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
