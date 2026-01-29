@@ -1,58 +1,78 @@
 :root {
   --bg: #000000;
-  --accent: #8c52ff;
-  --cta: #ff3258;
   --text: #f0e9f2;
-  --muted: rgba(240, 233, 242, 0.65);
-  --card: #0c0c0c;
+  --secondary: #8c52ff;
+  --accent: #ff3258;
+  --card: #111111;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html, body {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
-}
-
-section {
-  padding: 140px 10vw;
+  font-family: Inter, system-ui, sans-serif;
+  line-height: 1.6;
 }
 
 h1 {
-  font-size: clamp(3.5rem, 6vw, 5.5rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  margin: 0 0 12px;
 }
 
 h2 {
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
-  margin-bottom: 36px;
-  position: relative;
-}
-
-h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -12px;
-  width: 60px;
-  height: 4px;
-  background: var(--accent);
+  font-size: 2.4rem;
+  margin-bottom: 32px;
 }
 
 p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: var(--muted);
-  max-width: 720px;
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
-a {
-  color: inherit;
+main {
+  padding: 120px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 20px;
+  margin: 0;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text);
   text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--secondary);
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 160px;
 }

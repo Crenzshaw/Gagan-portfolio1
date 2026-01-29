@@ -1,51 +1,83 @@
 import { motion } from "framer-motion";
-import profile from "../assets/profile.jpg";
+
+const BASE = import.meta.env.BASE_URL;
 
 export default function Hero() {
   return (
-    <section style={{ minHeight: "100vh", display: "flex", alignItems: "center" }}>
-      <motion.div
-        initial={{ opacity: 0, y: 80 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease: "easeOut" }}
-        style={{ maxWidth: 820 }}
+    <section
+      id="hero"
+      style={{
+        minHeight: "100vh",
+        backgroundImage: `linear-gradient(
+          rgba(0,0,0,0.65),
+          rgba(0,0,0,0.85)
+        ), url(${BASE}hero-bg.jpg)`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        display: "flex",
+        alignItems: "center",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          padding: "0 40px",
+        }}
       >
-        <img
-          src={profile}
+        <motion.img
+          src={`${BASE}profile.jpg`}
           alt="Gagan Singh"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6 }}
           style={{
-            width: 120,
-            height: 120,
+            width: "96px",
+            height: "96px",
             borderRadius: "50%",
-            marginBottom: 32,
-            border: "3px solid var(--accent)",
+            border: "3px solid var(--secondary)",
+            marginBottom: "24px",
           }}
         />
 
-        <h1>Gagan Singh</h1>
+        <motion.h1
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          Gagan Singh
+        </motion.h1>
 
-        <p style={{ color: "var(--accent)", margin: "24px 0 40px" }}>
+        <motion.p
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          style={{
+            color: "var(--secondary)",
+            fontSize: "1.25rem",
+            marginBottom: "32px",
+          }}
+        >
           Technical Writer · API Documentation · Product Docs
-        </p>
+        </motion.p>
 
         <motion.a
-          href="/resume.pdf"
-          target="_blank"
-          whileHover={{ scale: 1.06 }}
-          whileTap={{ scale: 0.96 }}
+          href={`${BASE}resume.pdf`}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           style={{
             display: "inline-block",
-            padding: "16px 36px",
-            background: "var(--cta)",
+            background: "var(--accent)",
             color: "#000",
-            borderRadius: 14,
-            fontWeight: 800,
-            fontSize: 16,
+            padding: "14px 28px",
+            borderRadius: "999px",
+            fontWeight: "600",
+            textDecoration: "none",
           }}
         >
           Download Resume
         </motion.a>
-      </motion.div>
+      </div>
     </section>
   );
 }
