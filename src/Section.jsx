@@ -1,32 +1,47 @@
 import { motion } from "framer-motion";
 
-export default function Section({ title, children }) {
+export default function Section({ title, index, children }) {
   return (
     <motion.section
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.6 }}
       style={{
-        maxWidth: 900,
-        margin: "60px auto",
-        padding: "40px 28px",
-        background: "var(--card-bg)",
-        borderRadius: 18,
-        border: "1px solid var(--border-soft)",
+        padding: "120px 10vw",
+        borderTop: "1px solid rgba(255,255,255,0.08)",
       }}
     >
-      <h2
+      <div
         style={{
-          marginBottom: 20,
-          color: "var(--accent)",
-          fontSize: 20,
+          display: "grid",
+          gridTemplateColumns: "120px 1fr",
+          gap: 40,
         }}
       >
-        {title}
-      </h2>
+        <div
+          style={{
+            color: "var(--accent)",
+            fontSize: 14,
+            fontWeight: 600,
+          }}
+        >
+          {String(index).padStart(2, "0")}
+        </div>
 
-      {children}
+        <div>
+          <h2
+            style={{
+              fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
+              marginBottom: 24,
+            }}
+          >
+            {title}
+          </h2>
+
+          {children}
+        </div>
+      </div>
     </motion.section>
   );
 }

@@ -1,46 +1,37 @@
 :root {
-  --bg-main: #0b1220;
-  --bg-gradient: radial-gradient(
-    circle at top,
-    #0f1c2e 0%,
-    #0b1220 60%
-  );
-
-  --text-primary: #e6edf3;
-  --text-secondary: #9fb3c8;
-
-  --accent: #38bdf8;
-  --accent-soft: rgba(56, 189, 248, 0.15);
-
-  --card-bg: rgba(255, 255, 255, 0.03);
-  --border-soft: rgba(255, 255, 255, 0.06);
+  --bg: #000000;
+  --accent: #8c52ff;
+  --text: #f0e9f2;
+  --cta: #ff3258;
+  --muted: rgba(240, 233, 242, 0.6);
 }
 
 * {
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
-  min-height: 100vh;
-  background: var(--bg-gradient);
-  color: var(--text-primary);
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
-  line-height: 1.6;
 }
 
 h1, h2, h3 {
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
 p {
-  color: var(--text-secondary);
   margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 a {
-  color: var(--accent);
   text-decoration: none;
+  color: inherit;
 }

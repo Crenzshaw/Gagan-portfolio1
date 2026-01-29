@@ -6,42 +6,49 @@ export default function App() {
     <>
       <Hero />
 
-      <Section title="About">
+      <Section title="About" index={1}>
         <p>
-          Technical Writer with 4+ years of experience creating clear,
-          user-centric documentation across Application Security, Cloud,
-          Salesforce, Testing, and Telephony platforms. I specialize in API
-          documentation, release notes, and scalable product docs.
+          I’m a Technical Writer with 4+ years of experience creating
+          documentation that developers actually enjoy using. My work spans
+          Application Security, Cloud, Salesforce, Testing, and Telephony
+          platforms.
         </p>
       </Section>
 
-      <Section title="Experience">
-        <p><strong>ArmorCode</strong> — Technical Writer (2024–Present)</p>
+      <Section title="Experience" index={2}>
         <p>
-          Application Security Posture Management documentation, APIs,
-          integrations, and release notes.
+          <strong>ArmorCode</strong> — Technical Writer (2024–Present)
+        </p>
+        <p>
+          Leading ASPM documentation, APIs, integrations, release notes, and
+          cross-team documentation strategy.
         </p>
 
         <br />
 
-        <p><strong>Provar Testing</strong> — Technical Writer (2022–2024)</p>
         <p>
-          Salesforce automation documentation, user manuals, installation
-          guides, and help content.
+          <strong>Provar Testing</strong> — Technical Writer (2022–2024)
+        </p>
+        <p>
+          Salesforce automation docs, installation guides, help content, and
+          WordPress knowledge bases.
         </p>
 
         <br />
 
-        <p><strong>RTDS</strong> — Information Developer (2019–2022)</p>
         <p>
-          Telephony and cloud platform docs, APIs, SOPs, FAQs, and LMS content.
+          <strong>RTDS</strong> — Information Developer (2019–2022)
+        </p>
+        <p>
+          Telephony and cloud platform documentation, APIs, SOPs, FAQs, and LMS
+          content.
         </p>
       </Section>
 
-      <Section title="Skills">
+      <Section title="Skills" index={3}>
         <p>
           Git · Jira · Confluence · Markdown · Zendesk · WordPress · Salesforce ·
-          API Documentation
+          API Documentation · Release Notes
         </p>
       </Section>
     </>
