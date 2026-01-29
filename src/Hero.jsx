@@ -4,16 +4,18 @@ import resume from "../assets/Gagan_Singh_Resume.pdf";
 
 export default function Hero() {
   return (
-    <section
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center",
-      }}
-    >
+ <section
+  style={{
+    minHeight: "100vh",
+    position: "relative",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+  }}
+>
+
       <motion.img
         src={profile}
         alt="Gagan Singh"
@@ -61,6 +63,20 @@ export default function Hero() {
       >
         Download Resume
       </motion.a>
+      <motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 1.2 }}
+  style={{
+    position: "absolute",
+    bottom: 40,
+    fontSize: 14,
+    opacity: 0.6,
+  }}
+>
+  ↓ Scroll
+</motion.div>
+
     </section>
   );
 }

@@ -7,7 +7,7 @@ export default function Section({ title, children }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      style={{ margin: "120px auto", maxWidth: 900, padding: "0 20px" }}
+      style={{ margin: "80px auto", maxWidth: 900, padding: "0 20px" }}
     >
       <h2 style={{ marginBottom: 16 }}>{title}</h2>
       {children}
