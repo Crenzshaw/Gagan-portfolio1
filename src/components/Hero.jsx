@@ -64,8 +64,7 @@ export default function Hero() {
         >
           <h1>Gagan Singh</h1>
           <p>
-            Technical Writer · API Documentation · Product Docs · Developer
-            Experience
+            Technical Writer • API Documentation • Product Experience • Prompt Engineering
           </p>
 
           <a
