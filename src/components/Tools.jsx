@@ -20,16 +20,25 @@ export default function Tools() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => entry.isIntersecting && setVisible(true),
-      { threshold: 0.4 }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      setVisible(entry.isIntersecting);
+    },
+    {
+      threshold: 0.35,
+    }
+  );
+
+  if (sectionRef.current) observer.observe(sectionRef.current);
+
+  return () => observer.disconnect();
+}, []);
 
   return (
-    <section id="tools" className="tools-section" ref={sectionRef}>
+    <section
+  id="tools"
+  ref={sectionRef}
+  className={`tools-section ${visible ? "is-visible" : ""}`}>
       <div className="tools-wrapper">
         <div className="tools-header">
           <h2>

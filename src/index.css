@@ -353,3 +353,53 @@ section p {
     justify-items: center;
   }
 }
+
+/* =====================
+   SCROLL-REPLAY ANIMATION
+===================== */
+
+/* ICONS – initial state */
+.tool-circle {
+  opacity: 0;
+  transform: translateY(28px) scale(0.95);
+}
+
+/* ICONS – visible */
+.tools-section.is-visible .tool-circle {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition:
+    opacity 0.6s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* STAGGER */
+.tools-section.is-visible .tool-circle:nth-child(1) { transition-delay: 0.05s; }
+.tools-section.is-visible .tool-circle:nth-child(2) { transition-delay: 0.12s; }
+.tools-section.is-visible .tool-circle:nth-child(3) { transition-delay: 0.18s; }
+.tools-section.is-visible .tool-circle:nth-child(4) { transition-delay: 0.24s; }
+.tools-section.is-visible .tool-circle:nth-child(5) { transition-delay: 0.30s; }
+.tools-section.is-visible .tool-circle:nth-child(6) { transition-delay: 0.36s; }
+.tools-section.is-visible .tool-circle:nth-child(7) { transition-delay: 0.42s; }
+.tools-section.is-visible .tool-circle:nth-child(8) { transition-delay: 0.48s; }
+.tools-section.is-visible .tool-circle:nth-child(9) { transition-delay: 0.54s; }
+.tools-section.is-visible .tool-circle:nth-child(10){ transition-delay: 0.60s; }
+.tools-section.is-visible .tool-circle:nth-child(11){ transition-delay: 0.66s; }
+
+/* =====================
+   SKILL BARS – REPLAY
+===================== */
+
+.tools-bars .fill {
+  width: 0;
+}
+
+.tools-section.is-visible .tools-bars .fill {
+  animation: growBar 1.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes growBar {
+  to {
+    width: var(--value);
+  }
+}
