@@ -17,7 +17,7 @@ const works = [
 
 export default function Work() {
   return (
-    <section>
+ <section id="work">
       <h2>My Work</h2>
 
       <div

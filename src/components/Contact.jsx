@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section>
+    <section id="contact">
       <h2>Get in Touch</h2>
       <a
         href="mailto:gaganzsingh3@gmail.com"
