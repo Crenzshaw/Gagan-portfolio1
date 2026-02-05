@@ -95,8 +95,6 @@ body {
 .hero-text h1 {
   font-size: 5.2rem;
   font-weight: 800;
-  -webkit-text-stroke: 2px #333;
-  text-shadow: 2px 2px 0 #333;
   margin-bottom: 20px;
 }
 
@@ -108,8 +106,8 @@ body {
 
 .hero-btn {
   padding: 20px 52px;
-  background: #ff3258;
-  color: #000;
+  background: #a8233b;
+  color: #ffffff;
   font-size: 1.5rem;
   font-weight: 800;
   border-radius: 999px;
