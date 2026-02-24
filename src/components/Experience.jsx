@@ -3,10 +3,19 @@ const BASE = import.meta.env.BASE_URL;
 export default function Experience() {
   const experiences = [
     {
+      company: "Leapwork",
+      role: "Senior Technical Writer",
+      type: "Full-time",
+      duration: "Feb 2026 – Present · 1 mo",
+      location: "Gurugram, Haryana, India",
+      logo: `${BASE}leapwork.png`,
+      skills: "Confluence",
+    },
+    {
       company: "ArmorCode Inc.",
       role: "Technical Writer",
       type: "Full-time",
-      duration: "Oct 2024 – Present · 1 yr 4 mos",
+      duration: "Oct 2024 – Jan 2026 · 1 yr 4 mos",
       location: "Gurugram, Haryana, India",
       logo: `${BASE}armorcode.png`,
       skills: "Prompt Engineering, Large Language Models (LLM) +1 skill",

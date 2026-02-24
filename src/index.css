@@ -180,6 +180,30 @@ section p {
   object-fit: contain;
 }
 
+.experience-content h3 {
+  font-size: 2.4rem;   /* BIGGER designation */
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.experience-content .company {
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.experience-content .muted {
+  font-size: 1.6rem;
+  opacity: 0.75;
+  margin-top: 4px;
+}
+
+.experience-content .skills {
+  font-size: 1.5rem;   /* SMALLER than designation */
+  font-weight: 500;
+  opacity: 0.8;
+  margin-top: 14px;
+}
+
 /* =====================
    TOOLS (FINAL CLEAN)
 ===================== */
